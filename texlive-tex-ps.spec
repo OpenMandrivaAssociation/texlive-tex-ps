@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-tex-ps
 Version:	20091010
-Release:	3
+Release:	4
 Summary:	TeX to PostScript generic macros and add-ons
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/TeX-PS
