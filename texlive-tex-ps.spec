@@ -1,9 +1,3 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/generic/TeX-PS
-# catalog-date 2009-10-10 00:51:28 +0200
-# catalog-license pd
-# catalog-version undef
 Name:		texlive-tex-ps
 Version:	20170414
 Release:	1
@@ -33,28 +27,9 @@ etc.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/dvips/tex-ps/crops.pro
-%{_texmfdistdir}/dvips/tex-ps/mirr.hd
-%{_texmfdistdir}/dvips/tex-ps/separate.pro
-%{_texmfdistdir}/tex/generic/tex-ps/cmyk-hax.tex
-%{_texmfdistdir}/tex/generic/tex-ps/epsfx.tex
-%{_texmfdistdir}/tex/generic/tex-ps/poligraf.sty
-%{_texmfdistdir}/tex/generic/tex-ps/trans.tex
-%doc %{_texmfdistdir}/doc/generic/tex-ps/cmyk-hax/README
-%doc %{_texmfdistdir}/doc/generic/tex-ps/cmyk-hax/cmyk-doc.pdf
-%doc %{_texmfdistdir}/doc/generic/tex-ps/cmyk-hax/fountain.eps
-%doc %{_texmfdistdir}/doc/generic/tex-ps/cmyk-hax/gdansk.eps
-%doc %{_texmfdistdir}/doc/generic/tex-ps/cmyk-hax/rules.tex
-%doc %{_texmfdistdir}/doc/generic/tex-ps/cmyk-hax/sam1-sep.bat
-%doc %{_texmfdistdir}/doc/generic/tex-ps/cmyk-hax/sample1.tex
-%doc %{_texmfdistdir}/doc/generic/tex-ps/cmyk-hax/sample2.tex
-%doc %{_texmfdistdir}/doc/generic/tex-ps/cmyk-hax/sample3.tex
-%doc %{_texmfdistdir}/doc/generic/tex-ps/cmyk-hax/sample4.tex
-%doc %{_texmfdistdir}/doc/generic/tex-ps/cmyk-hax/screen.eps
-%doc %{_texmfdistdir}/doc/generic/tex-ps/poligraf/README
-%doc %{_texmfdistdir}/doc/generic/tex-ps/poligraf/kol-cmyk.eps
-%doc %{_texmfdistdir}/doc/generic/tex-ps/poligraf/sample.tex
-%doc %{_texmfdistdir}/doc/generic/tex-ps/poligraf/samplelx.tex
+%{_texmfdistdir}/dvips/tex-ps
+%{_texmfdistdir}/tex/generic/tex-ps
+%doc %{_texmfdistdir}/doc/generic/tex-ps
 
 #-----------------------------------------------------------------------
 %prep
@@ -65,16 +40,3 @@ etc.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20091010-2
-+ Revision: 756746
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20091010-1
-+ Revision: 719711
-- texlive-tex-ps
-- texlive-tex-ps
-- texlive-tex-ps
-
