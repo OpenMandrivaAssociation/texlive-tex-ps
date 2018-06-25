@@ -1,5 +1,5 @@
 Name:		texlive-tex-ps
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	TeX to PostScript generic macros and add-ons
 Group:		Publishing
