@@ -1,6 +1,6 @@
 Name:		texlive-tex-ps
-Version:	20180303
-Release:	2
+Version:	20190228
+Release:	1
 Summary:	TeX to PostScript generic macros and add-ons
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/TeX-PS
