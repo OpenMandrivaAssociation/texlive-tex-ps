@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	TeX to PostScript generic macros and add-ons
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/generic/TeX-PS
+URL:		https://www.ctan.org/tex-archive/macros/generic/TeX-PS
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tex-ps.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tex-ps.doc.r%{version}.tar.xz
