@@ -1,42 +1,20 @@
-Name:		texlive-tex-ps
-Version:	15878
-Release:	2
+%global tl_name tex-ps
+%global tl_revision 15878
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
 Summary:	TeX to PostScript generic macros and add-ons
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/generic/TeX-PS
-License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tex-ps.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tex-ps.doc.r%{version}.tar.xz
+License:	pd
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tex-ps.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tex-ps.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-TeX to PostScript generic macros and add-ons: transformations
-of EPS files, prepress preparation, color separation, mirror,
-etc.
+TeX to PostScript generic macros and add-ons: transformations of EPS
+files, prepress preparation, color separation, mirror, etc.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/dvips/tex-ps
-%{_texmfdistdir}/tex/generic/tex-ps
-%doc %{_texmfdistdir}/doc/generic/tex-ps
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar dvips tex doc %{buildroot}%{_texmfdistdir}
